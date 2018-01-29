@@ -45,12 +45,12 @@ def GenerateReadme():
 
         #Generates Archive Contents List, excludes .DS_Store File
         for x in files:
-            if x != ".DS_Store":
+            if (x != ".DS_Store") and (x != "MakeReadme.py"):
                 if x[len(x)-3:] == ".py":
                     f.write("\t\t" + "--" + str(x) + "\n")
 
         for x in files:
-            if x != ".DS_Store":
+            if x != ".DS_Store" and (x != "MakeReadme.py"):
                 if x[len(x)-4:] == ".txt":
                     f.write("\t\t" + "--" + str(x) + "\n")
 
@@ -58,12 +58,12 @@ def GenerateReadme():
         f.write("\n\tDescriptions of Programs functionality\n")
 
         for x in files:
-            if x != ".DS_Store":
+            if x != ".DS_Store" and (x != "MakeReadme.py"):
                 if x[len(x)-3:] == ".py":
                     f.write("\t\t" + "--" + str(x) + ": \n\n")
 
         for x in files:
-            if x != ".DS_Store":
+            if x != ".DS_Store" and (x != "MakeReadme.py"):
                 if x[len(x)-4:] == ".txt":
                     f.write("\t\t" + "--" + str(x) + ": \n\n")
 
